@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect, Switch, Route ,withRouter} from 'react-router-dom';
 import routerData from '../../routerConfig';
-import Login from '../../pages/Login';
-import cookie from 'react-cookies'
+// import Login from '../../pages/Login';
+// import cookie from 'react-cookies'
 @withRouter
 class MainRoutes extends Component {
     static displayName = 'MainRoutes';
@@ -78,25 +78,25 @@ class MainRoutes extends Component {
     };
 
     render() {
-        let user_id = cookie.load("user_id");
-        if (user_id == undefined) {
-            return (
-                <Switch>
-                    <Route
-                        path='/login'
-                        component={Login}
-                    />
-                    <Redirect exact from="/*" to="/login" />
-                </Switch>
-            )
-        }
+        // let user_id = cookie.load("user_id");
+        // if (user_id == undefined) {
+        //     return (
+        //         <Switch>
+        //             <Route
+        //                 path='/login'
+        //                 component={Login}
+        //             />
+        //             <Redirect exact from="/*" to="/login" />
+        //         </Switch>
+        //     )
+        // }
         return (
             <Switch>
                 {/* 渲染路由表 */}
                 {routerData.map(this.renderNormalRoute)}
 
                 {/* 首页默认重定向到  */}
-                <Redirect exact from="/" to="/task/task" />
+                <Redirect exact from="/" to="/register" />
             </Switch>
         );
     }

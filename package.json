@@ -2,7 +2,18 @@
   "name": "biyesheji",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@icedesign/base": "^0.2.7",
+    "@icedesign/form-binder": "^1.0.6",
+    "@icedesign/layout": "^1.0.7",
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.5",
+    "react-app-rewired": "^2.1.1",
+    "react-bootstrap": "^1.0.0-beta.6",
+    "react-dom": "^16.8.5",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^2.1.8"
+  },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
